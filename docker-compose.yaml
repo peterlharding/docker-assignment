@@ -1,0 +1,18 @@
+
+version: "3.9"
+
+services:
+  demo:
+    build: .
+    container_name: nodedemo
+    ports:
+      - 3000:3000
+    networks:
+      - container-network
+
+
+networks:
+  container-network:
+    name: demo-network
+
+
